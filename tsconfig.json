@@ -2,13 +2,18 @@
   "extends": "@1stg/tsconfig/lib",
   "compilerOptions": {
     "baseUrl": ".",
+    "noEmit": true,
     "paths": {
-      "pkg": ["packages/pkg/src"]
+      "@reuv/*": ["packages/@reuv/*/src"],
+      "reuv": ["packages/reuv/src"]
     }
   },
   "references": [
     {
-      "path": "packages/pkg"
+      "path": "packages/@reuv/core"
+    },
+    {
+      "path": "packages/reuv"
     }
   ]
 }

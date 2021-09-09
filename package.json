@@ -7,12 +7,14 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/@reuv/*"
   ],
   "scripts": {
-    "build": "run-p build:*",
+    "build": "run-s build:tsc build:r",
     "build:r": "r -f cjs",
     "build:tsc": "tsc -b",
+    "clean": "rimraf 'packages/**/{lib,*.tsbuildinfo}'",
     "jest": "node --experimental-vm-modules node_modules/.bin/jest",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
@@ -58,7 +60,8 @@
     },
     "moduleNameMapper": {
       "^(\\.{1,2}/.*)\\.js$": "$1",
-      "pkg": "<rootDir>/packages/pkg/src"
+      "@reuv/(.*)": "<rootDir>/packages/@reuv/$1/src",
+      "reuv": "<rootDir>/packages/reuv/src"
     }
   },
   "prettier": "@1stg/prettier-config",

@@ -1,0 +1,24 @@
+{
+  "name": "reuv",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Sharable libraries between React and Vue.",
+  "repository": "git+https://github.com/rx-ts/reuv.git",
+  "homepage": "https://github.com/rx-ts/reuv/blob/main/packages/pkg",
+  "author": "JounQin <admin@1stg.me>",
+  "exports": {
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+  },
+  "types": "lib",
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@reuv/core": "^0.0.0",
+    "tslib": "^2.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
