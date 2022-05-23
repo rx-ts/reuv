@@ -1,9 +1,9 @@
 {
-  "name": "mono-lib-boilerplate",
+  "name": "@rxts/reuv",
   "version": "0.0.0",
   "type": "module",
   "description": "Sharable libraries between React and Vue.",
-  "repository": "git+https://github.com/rx-ts/mono-lib-boilerplate.git",
+  "repository": "git+https://github.com/rx-ts/reuv.git",
   "author": "JounQin <admin@1stg.me>",
   "license": "MIT",
   "private": true,
@@ -16,30 +16,28 @@
     "build:r": "r -f cjs",
     "build:tsc": "tsc -b",
     "clean": "rimraf 'packages/**/{lib,*.tsbuildinfo}'",
-    "jest": "node --experimental-vm-modules node_modules/.bin/jest",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
     "lint:tsc": "tsc --noEmit",
     "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
-    "prerelease": "yarn build",
+    "prerelease": "npm run build",
     "release": "changeset publish",
-    "test": "yarn jest",
-    "ts": "node --loader ts-node/esm",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "typecov": "type-coverage"
   },
   "devDependencies": {
-    "@1stg/lib-config": "^4.0.0",
-    "@changesets/changelog-github": "^0.4.1",
-    "@changesets/cli": "^2.17.0",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "ts-jest": "^27.0.5",
-    "ts-node": "^10.2.1",
-    "type-coverage": "^2.18.2",
-    "typescript": "^4.4.2"
+    "@1stg/lib-config": "^6.1.1",
+    "@changesets/changelog-github": "^0.4.4",
+    "@changesets/cli": "^2.22.0",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^17.0.35",
+    "ts-jest": "^28.0.2",
+    "ts-node": "^10.8.0",
+    "type-coverage": "^2.21.1",
+    "typescript": "^4.6.4"
   },
   "resolutions": {
-    "prettier": "^2.3.2"
+    "prettier": "^2.6.2"
   },
   "commitlint": {
     "extends": "@1stg"
