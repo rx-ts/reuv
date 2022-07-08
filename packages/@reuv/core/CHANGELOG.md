@@ -1,5 +1,11 @@
 # @reuv/core
 
+## 0.0.2
+
+### Patch Changes
+
+- [`e7fd8ec`](https://github.com/rx-ts/reuv/commit/e7fd8eca10c783a9109f35f3198c15d99f3447ed) Thanks [@JounQin](https://github.com/JounQin)! - chore: add donate and funding fields
+
 ## 0.0.1
 
 ### Patch Changes
