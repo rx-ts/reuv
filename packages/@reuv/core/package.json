@@ -2,7 +2,7 @@
   "name": "@reuv/core",
   "version": "0.0.3",
   "type": "module",
-  "description": "Sharable core library between React and Vue.",
+  "description": "Sharable core library between React and Vue",
   "repository": "git+https://github.com/rx-ts/reuv.git",
   "homepage": "https://github.com/rx-ts/reuv/blob/main/packages/@reuv/core",
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",

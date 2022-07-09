@@ -28,7 +28,15 @@ const Readme = () => {
 }
 
 const Changelog = () => {
-  const Changelog = lazy(() => import('../CHANGELOG.md'))
+  const { pkgName, name } = useParams<'name' | 'pkgName'>()
+  const Changelog = lazy(() =>
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+    pkgName
+      ? import(`../packages/@reuv/${pkgName}/CHANGELOG.md`)
+      : name
+      ? import(`../packages/${name}/CHANGELOG.md`)
+      : import('../CHANGELOG.md'),
+  )
   return (
     <Suspense>
       <Changelog />
@@ -40,15 +48,23 @@ export const App = () => (
   <Router>
     <Routes>
       <Route
-        path="/CHANGELOG.md"
-        element={<Changelog />}
-      />
-      <Route
         path="/packages/:name"
         element={<Readme />}
       />
       <Route
+        path="/packages/@reuv/:pkgName"
+        element={<Readme />}
+      />
+      <Route
+        path="/CHANGELOG.md"
+        element={<Changelog />}
+      />
+      <Route
         path="/packages/:name/CHANGELOG.md"
+        element={<Changelog />}
+      />
+      <Route
+        path="/packages/@reuv/:pkgName/CHANGELOG.md"
         element={<Changelog />}
       />
       <Route

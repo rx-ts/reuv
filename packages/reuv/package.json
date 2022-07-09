@@ -2,7 +2,7 @@
   "name": "reuv",
   "version": "0.0.3",
   "type": "module",
-  "description": "Sharable libraries between React and Vue.",
+  "description": "Sharable libraries between React and Vue",
   "repository": "git+https://github.com/rx-ts/reuv.git",
   "homepage": "https://github.com/rx-ts/reuv/blob/main/packages/pkg",
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
