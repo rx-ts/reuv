@@ -11,6 +11,7 @@
     "packages/*",
     "packages/@reuv/*"
   ],
+  "packageManager": "pnpm@7.5.0",
   "scripts": {
     "build": "run-s build:tsc build:r build:docs",
     "build:docs": "w -e docs -p --publicPath /",
