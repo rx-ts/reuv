@@ -1,6 +1,6 @@
 {
   "name": "reuv",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "description": "Sharable libraries between React and Vue.",
   "repository": "git+https://github.com/rx-ts/reuv.git",
@@ -50,7 +50,7 @@
     "lib"
   ],
   "dependencies": {
-    "@reuv/core": "^0.0.2",
+    "@reuv/core": "^0.0.3",
     "tslib": "^2.4.0"
   },
   "publishConfig": {

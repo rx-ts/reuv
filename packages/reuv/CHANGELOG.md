@@ -1,5 +1,14 @@
 # reuv
 
+## 0.0.3
+
+### Patch Changes
+
+- [`db15342`](https://github.com/rx-ts/reuv/commit/db1534289887e6fa3deb180bcaef15bd2db23f1c) Thanks [@JounQin](https://github.com/JounQin)! - build: migrate to pnpm
+
+- Updated dependencies [[`db15342`](https://github.com/rx-ts/reuv/commit/db1534289887e6fa3deb180bcaef15bd2db23f1c)]:
+  - @reuv/core@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
