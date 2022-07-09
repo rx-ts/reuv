@@ -1,0 +1,5 @@
+{
+  "name": "reuv-docs",
+  "type": "commonjs",
+  "description": "Sharable libraries between React and Vue"
+}

@@ -2,7 +2,7 @@
   "name": "@rxts/reuv",
   "version": "0.0.0",
   "type": "module",
-  "description": "Sharable libraries between React and Vue.",
+  "description": "Sharable libraries between React and Vue",
   "repository": "git+https://github.com/rx-ts/reuv.git",
   "author": "JounQin (https://www.1stG.me) <admin@1stg.me>",
   "license": "MIT",
@@ -12,44 +12,77 @@
     "packages/@reuv/*"
   ],
   "scripts": {
-    "build": "run-s build:tsc build:r",
+    "build": "run-s build:tsc build:r build:docs",
+    "build:docs": "w -e docs -p --publicPath /",
     "build:r": "r -f cjs",
     "build:tsc": "tsc -b",
     "clean": "rimraf 'packages/**/{lib,*.tsbuildinfo}'",
+    "dev": "w -e docs",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
+    "lint:style": "stylelint --cache '**/*.scss'",
     "lint:tsc": "tsc --noEmit",
-    "prepare": "simple-git-hooks && yarn-deduplicate --strategy fewer || exit 0",
+    "prepare": "simple-git-hooks",
     "prerelease": "yarn build",
     "release": "changeset publish",
+    "start": "sirv dist",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "typecov": "type-coverage"
   },
   "devDependencies": {
+    "@1stg/app-config": "^6.0.0",
     "@1stg/lib-config": "^8.0.0",
     "@changesets/changelog-github": "^0.4.5",
     "@changesets/cli": "^2.23.1",
+    "@pkgr/webpack": "^3.1.2",
+    "@pkgr/webpack-mdx": "^2.0.3",
+    "@reuv/core": "workspace:*",
     "@types/jest": "^28.1.4",
     "@types/node": "^18.0.3",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@types/web": "^0.0.69",
+    "github-markdown-css": "^5.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "reuv": "workspace:*",
+    "sirv-cli": "^2.0.2",
     "ts-jest": "^28.0.5",
-    "ts-node": "^10.8.2",
+    "tsx": "^3.7.1",
     "type-coverage": "^2.21.2",
-    "typescript": "^4.7.4",
-    "yarn-deduplicate": "^5.0.0"
+    "typescript": "^4.7.4"
   },
   "resolutions": {
-    "prettier": "^2.6.2"
+    "prettier": "^2.7.1"
   },
   "commitlint": {
     "extends": "@1stg"
   },
   "eslintConfig": {
     "root": true,
-    "extends": "@1stg"
+    "extends": "@1stg",
+    "rules": {
+      "react/react-in-jsx-scope": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          ".github/*.yml"
+        ],
+        "rules": {
+          "unicorn/filename-case": "off"
+        }
+      }
+    ]
   },
   "eslintIgnore": [
     "coverage",
-    "lib"
+    "dist",
+    "lib",
+    "/pnpm-*.yaml",
+    "!/.github",
+    "!/.*.cjs"
   ],
   "jest": {
     "preset": "ts-jest/presets/default-esm",
