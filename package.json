@@ -57,6 +57,9 @@
   "resolutions": {
     "prettier": "^2.7.1"
   },
+  "browserslist": [
+    "extends @1stg/browserslist-config/modern"
+  ],
   "commitlint": {
     "extends": "@1stg"
   },
