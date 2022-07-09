@@ -22,7 +22,7 @@
     "dev": "w -e docs --disableDotRule --publicPath /",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
-    "lint:style": "stylelint --cache '**/*.scss'",
+    "lint:style": "stylelint . --cache",
     "lint:tsc": "tsc --noEmit",
     "prepare": "simple-git-hooks",
     "prerelease": "yarn build",

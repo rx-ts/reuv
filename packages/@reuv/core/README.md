@@ -23,6 +23,5 @@ Detailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.m
 [MIT][] © [JounQin][]@[1stG.me][]
 
 [1stg.me]: https://www.1stg.me
-[changesets]: https://github.com/atlassian/changesets
 [jounqin]: https://github.com/JounQin
 [mit]: http://opensource.org/licenses/MIT
