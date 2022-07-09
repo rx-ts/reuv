@@ -18,6 +18,7 @@
     "build:r": "r -f cjs",
     "build:tsc": "tsc -b",
     "clean": "rimraf 'packages/**/{lib,*.tsbuildinfo}'",
+    "codesanbox:install": "npx pnpm@7.5.0 i",
     "dev": "w -e docs",
     "lint": "run-p lint:*",
     "lint:es": "eslint . --cache -f friendly",
