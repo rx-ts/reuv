@@ -14,7 +14,7 @@ importers:
       '@pkgr/webpack': ^3.1.2
       '@pkgr/webpack-mdx': ^2.0.3
       '@reuv/core': workspace:*
-      '@types/jest': ^28.1.4
+      '@types/jest': ^28.1.6
       '@types/node': ^18.0.3
       '@types/react': ^18.0.15
       '@types/react-dom': ^18.0.6
@@ -37,7 +37,7 @@ importers:
       '@pkgr/webpack': 3.1.2_7wjl2x7437ntxgqxgq32ggg7be
       '@pkgr/webpack-mdx': 2.0.3_z7ro4jost2k4sksbhba4ebu56y
       '@reuv/core': link:packages/@reuv/core
-      '@types/jest': 28.1.4
+      '@types/jest': 28.1.6
       '@types/node': 18.0.3
       '@types/react': 18.0.15
       '@types/react-dom': 18.0.6
@@ -3930,8 +3930,8 @@ packages:
       '@types/istanbul-lib-report': 3.0.0
     dev: true
 
-  /@types/jest/28.1.4:
-    resolution: {integrity: sha512-telv6G5N7zRJiLcI3Rs3o+ipZ28EnE+7EvF0pSrt2pZOMnAVI/f+6/LucDxOvcBcTeTL3JMF744BbVQAVBUQRA==}
+  /@types/jest/28.1.6:
+    resolution: {integrity: sha512-0RbGAFMfcBJKOmqRazM8L98uokwuwD5F8rHrv/ZMbrZBwVOWZUyPG6VFNscjYr/vjM3Vu4fRrCPbOs42AfemaQ==}
     dependencies:
       jest-matcher-utils: 28.1.1
       pretty-format: 28.1.1
