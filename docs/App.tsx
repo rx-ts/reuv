@@ -1,23 +1,25 @@
 import { lazy, Suspense } from 'react'
 import {
-  BrowserRouter as Router,
-  Navigate,
   Route,
+  BrowserRouter as Router,
   Routes,
   useParams,
+  Navigate,
 } from 'react-router-dom'
 
-import 'github-markdown-css'
 import './global.scss'
+import 'github-markdown-css'
+
+export type Params = { name: string } | { orgName: string; pkgName: string }
 
 const Readme = () => {
-  const { pkgName, name } = useParams<'name' | 'pkgName'>()
+  const params = useParams<Params>() as Readonly<Params>
   const Readme = lazy(() =>
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    pkgName
-      ? import(`../packages/@reuv/${pkgName}/README.md`)
-      : name
-      ? import(`../packages/${name}/README.md`)
+    'name' in params
+      ? import(`../packages/${params.name}/README.md`)
+      : 'orgName' in params
+      ? import(`../packages/${params.orgName}/${params.pkgName}/README.md`)
       : import('../README.md'),
   )
   return (
@@ -28,13 +30,13 @@ const Readme = () => {
 }
 
 const Changelog = () => {
-  const { pkgName, name } = useParams<'name' | 'pkgName'>()
+  const params = useParams<Params>() as Readonly<Params>
   const Changelog = lazy(() =>
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    pkgName
-      ? import(`../packages/@reuv/${pkgName}/CHANGELOG.md`)
-      : name
-      ? import(`../packages/${name}/CHANGELOG.md`)
+    'name' in params
+      ? import(`../packages/${params.name}/CHANGELOG.md`)
+      : 'orgName' in params
+      ? import(`../packages/${params.orgName}/${params.pkgName}/CHANGELOG.md`)
       : import('../CHANGELOG.md'),
   )
   return (
@@ -52,7 +54,7 @@ export const App = () => (
         element={<Readme />}
       />
       <Route
-        path="/packages/@reuv/:pkgName"
+        path="/packages/:orgName/:pkgName"
         element={<Readme />}
       />
       <Route
@@ -60,11 +62,11 @@ export const App = () => (
         element={<Changelog />}
       />
       <Route
-        path="/packages/:name/CHANGELOG.md"
+        path="/packages/:orgName/:pkgName/CHANGELOG.md"
         element={<Changelog />}
       />
       <Route
-        path="/packages/@reuv/:pkgName/CHANGELOG.md"
+        path="/packages/:name/CHANGELOG.md"
         element={<Changelog />}
       />
       <Route
