@@ -16,7 +16,7 @@ importers:
       '@reuv/core': workspace:*
       '@types/jest': ^28.1.6
       '@types/node': ^18.0.5
-      '@types/react': ^18.0.15
+      '@types/react': ^18.0.25
       '@types/react-dom': ^18.0.6
       '@types/web': ^0.0.69
       github-markdown-css: ^5.1.0
@@ -40,7 +40,7 @@ importers:
       '@reuv/core': link:packages/@reuv/core
       '@types/jest': 28.1.6
       '@types/node': 18.0.5
-      '@types/react': 18.0.15
+      '@types/react': 18.0.25
       '@types/react-dom': 18.0.6
       '@types/web': 0.0.69
       github-markdown-css: 5.1.0
@@ -4040,11 +4040,11 @@ packages:
   /@types/react-dom/18.0.6:
     resolution: {integrity: sha512-/5OFZgfIPSwy+YuIBP/FgJnQnsxhZhjjrnxudMddeblOouIodEQ75X14Rr4wGSG/bknL+Omy9iWlLo1u/9GzAA==}
     dependencies:
-      '@types/react': 18.0.15
+      '@types/react': 18.0.25
     dev: true
 
-  /@types/react/18.0.15:
-    resolution: {integrity: sha512-iz3BtLuIYH1uWdsv6wXYdhozhqj20oD4/Hk2DNXIn1kFsmp9x8d9QB6FnPhfkbhd2PgEONt9Q1x/ebkwjfFLow==}
+  /@types/react/18.0.25:
+    resolution: {integrity: sha512-xD6c0KDT4m7n9uD4ZHi02lzskaiqcBxf4zi+tXZY98a04wvc0hi/TcCPC2FOESZi51Nd7tlUeOJY8RofL799/g==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
