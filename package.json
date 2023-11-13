@@ -38,7 +38,7 @@
     "@changesets/changelog-github": "^0.4.5",
     "@changesets/cli": "^2.23.2",
     "@pkgr/webpack": "^3.1.2",
-    "@pkgr/webpack-mdx": "^2.0.3",
+    "@pkgr/webpack-mdx": "^2.2.0",
     "@reuv/core": "workspace:*",
     "@types/jest": "^28.1.8",
     "@types/node": "^18.0.5",
